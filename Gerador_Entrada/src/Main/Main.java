@@ -40,14 +40,14 @@ public class Main {
         }
         PrintWriter gravarArq = new PrintWriter(arq);
         
-        for (int i = 0; i < 18; i++) { //gerando valores de 2⁰ até 2¹⁷
+        for (int i = 2; i < 18; i++) { //gerando valores de 2⁰ até 2¹⁷
             n = (int) Math.pow(2,i); //n recebe 2 elevado a i
             gravarArq.printf("n = " + n + "\n"); //grava o valor de n no arquivo
             for (int j = 0; j < n; j++) {
-                gravarArq.printf(generator.nextInt(n) + " ");//grava o valor aleatorio no arquivo
+                gravarArq.printf((generator.nextInt(n)-n/2) + " ");//grava o valor aleatorio no arquivo
                 
             }
-            gravarArq.printf("\n"); //pula uma linha
+            gravarArq.printf("\n\n"); //pula uma linha
                    
             
         }
