@@ -40,7 +40,7 @@ public class Main {
         }
         PrintWriter gravarArq = new PrintWriter(arq);
         
-        for (int i = 2; i < 18; i++) { //gerando valores de 2⁰ até 2¹⁷
+        for (int i = 2; i < 17; i++) { //gerando valores de 2⁰ até 2¹⁶
             n = (int) Math.pow(2,i); //n recebe 2 elevado a i
             gravarArq.printf("n = " + n + "\n"); //grava o valor de n no arquivo
             for (int j = 0; j < n; j++) {
