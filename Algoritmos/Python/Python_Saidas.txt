@@ -1,0 +1,33 @@
+n = 4
+Tempo: 0 ms
+Max Subarray: 1
+------------------------
+n = 8
+Tempo: 0 ms
+Max Subarray: 4
+------------------------
+n = 16
+Tempo: 0 ms
+Max Subarray: 15
+------------------------
+n = 32
+Tempo: 1 ms
+Max Subarray: 104
+------------------------
+n = 64
+Tempo: 4 ms
+Max Subarray: 122
+------------------------
+n = 128
+Tempo: 8 ms
+Max Subarray: 255
+------------------------
+n = 256
+Tempo: 26 ms
+Max Subarray: 1647
+------------------------
+n = 512
+Tempo: 151 ms
+Max Subarray: 2082
+------------------------
+n = 1024

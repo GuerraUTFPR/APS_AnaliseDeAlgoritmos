@@ -15,15 +15,13 @@ def enumeration(A):
 				index_inicio = i
                 index_fim = j
 
-	
-
-	
-
 	return max_subset
 
+
+
 def gerarArray():
-	f = open("../../../entradas.txt", "r")
-	fw = open("Enumeration_Saida.txt","w")
+	f = open("../../entradas.txt", "r")
+	fw = open("Python_Saidas.txt","w")
 	for line in f:
 		if "n = " in line:
 			print line
