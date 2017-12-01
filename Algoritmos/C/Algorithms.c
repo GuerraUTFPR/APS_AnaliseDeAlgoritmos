@@ -1,7 +1,45 @@
+// Credits Enumeration : https://github.com/samuelsnyder/
 #include <stdio.h>
 
 
-int Enumeration(int A[]){
+int Enumeration(int a[], int n){
+	
+
+	//counters
+	int i; //pos of first term in subarray 
+	int j; //last term in subarray
+	int k; //current term in subarray
+
+	//int currentArray [n];
+	int currentArrayLength;
+	//int maxArray [n];
+	int maxArrayLength;
+	int sum = 0;
+	int best = 0;
+
+	for (i = 0; i < n; i++) //first term
+	{
+		for (j = i; j < n; j++){//last term
+			sum = 0;//
+			//eraseArray(currentArray);
+			currentArrayLength = 0;
+			for(k = i; k <= j; k++) //step thru terms
+			{
+				sum += a[k];
+				//currentArray[(k-i)] = a[k];
+				currentArrayLength++;
+			}
+				if (sum > best){
+				best = sum; //new record
+				maxArrayLength = currentArrayLength;
+				//copyArray(currentrrentArray, maxArray, maxArrayLength);
+			}
+		} 
+	}
+	return best;
+}
+
+int BetterEnumeration(int A[]){
 	int tam = sizeof(A) / sizeof(A[0]);
 	int max_subarray = 0;
 	int soma = 0;
