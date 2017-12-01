@@ -1,133 +1,110 @@
-// Credits Enumeration : https://github.com/samuelsnyder/
 #include <stdio.h>
 
+int enumerate(int n, int array[]){
 
-int Enumeration(int a[], int n){
-	
+	int max = 0;
+	int aux = 0;
 
-	//counters
-	int i; //pos of first term in subarray 
-	int j; //last term in subarray
-	int k; //current term in subarray
+	for(int i = 0; i < n; i++)
+		for(int j = i; j < n; j++){
 
-	//int currentArray [n];
-	int currentArrayLength;
-	//int maxArray [n];
-	int maxArrayLength;
-	int sum = 0;
-	int best = 0;
+			// Sum for sub-array array[i:j]
+			aux = 0;
+			for(int k = i; k <= j; k++)
+				aux += array[k];
 
-	for (i = 0; i < n; i++) //first term
-	{
-		for (j = i; j < n; j++){//last term
-			sum = 0;//
-			//eraseArray(currentArray);
-			currentArrayLength = 0;
-			for(k = i; k <= j; k++) //step thru terms
-			{
-				sum += a[k];
-				//currentArray[(k-i)] = a[k];
-				currentArrayLength++;
-			}
-				if (sum > best){
-				best = sum; //new record
-				maxArrayLength = currentArrayLength;
-				//copyArray(currentrrentArray, maxArray, maxArrayLength);
-			}
-		} 
-	}
-	return best;
-}
-
-int BetterEnumeration(int A[]){
-	int tam = sizeof(A) / sizeof(A[0]);
-	int max_subarray = 0;
-	int soma = 0;
-	int index_inicio, index_fim;
-
-	for (int i = 0; i < tam; ++i){
-		soma = 0;
-		index_inicio = i;
-
-		for (int j = i; j < tam; j++){
-		
-			soma += A[j];
-		
-			if (soma > max_subarray){
-					max_subarray = soma;
-					index_fim = j;
-				}	
+			// Updating max value
+			if(aux > max) max = aux;
 		}
 
+	return max;
+}
+
+int better_enumerate(int n, int array[]){
+
+	int max = 0;
+	int aux = 0;
+
+	for(int i = 0; i < n; i++){
+		aux = 0;
+		for(int j = i; j < n; j++){
+
+			aux += array[j];
+
+			// Updating max value
+			if(aux > max) max = aux;
+		}
+	}
+
+	return max;
+}
+
+int max_xffix(int n, int array[], int pre){
+
+	int max = 0;
+	int aux = 0;
+
+	for(int i = 0; i < n; i++){
+
+		if(pre)
+			aux += array[i];
+		else
+			aux += array[n-i-1];
+
+		// Updating max value
+		if(aux > max) max = aux;
+	}
+
+	return max;
+}
+
+int divide_and_conquer(int n, int array[]){
+
+	if(n == 1)
+		return array[0];
+
+	int max = 0;
+	int aux = 0;
+	int h = (float)n/2;
+
+	// First half
+	aux = divide_and_conquer(h,array);
+	if(aux > max) max = aux;
+
+	// Second half
+	aux = divide_and_conquer(n-h,array+h);
+	if(aux > max) max = aux;
+
+	// Middle
+	aux = max_xffix(h,array,0) + max_xffix(n-h,array+h,1);
+	if(aux > max) max = aux;
+
+	return max;
+}
+
+int linear(int n, int array[]){
+
+	int max_suffix		= 0;
+	int max_subarray	= 0;
+	int aux = 0;
+
+	for(int i = 0; i < n; i++){
+
+		// Max suffix i
+		aux = max_suffix + array[i];
+		if(aux > 0)
+			max_suffix = aux;
+		else
+			max_suffix = 0;
+
+		// Max sub-array i
+		if(max_suffix > max_subarray)
+			max_subarray = max_suffix;
+
+	}
+
 	return max_subarray;
-	
-	}
 }
-
-int divAndCon(int a[], int lo, int hi){
-	//int* somaArray = malloc((hi - lo) * sizeof(int)); //for storing winning array, 
-	
-	int meio;
-	
-	
-	int maxEsq=0;
-	int maxDir=0;
-
-	//max's found crossing middle iteratively
-	int bothMax=0;
-	int bothMaxLeft=0;
-	int bothMaxRight=0;
-
-	//counters
-	int i, soma;
-
-	//base case, only 1 element in array
-	//TODO: ensure no issue w/ no elements
-	if (lo==hi) { //lo and hi are the same element
-		return a[hi]; //soma is this element alone
-	}
-
-	//divide  array into two halves
-	meio = (lo + hi)/2;
-
-	//maximum of 
-
-		//maximum soma on left
-		//recursive call
-
-	
-	maxEsq = divAndCon(a, lo, meio);
-
-		//max soma on right
-		//recursive call
-	
-	maxDir = divAndCon(a, meio+1, hi);
-
-		//max soma from meio
-			//find max going left
-
-	bothMaxLeft = 0;
-	soma = 0;
-	for (i = meio-1; i >=0; i-- ){
-		soma += a[i];
-		if (soma > bothMaxLeft)
-			bothMaxLeft = soma;
-	}
-	
-			//find max going right
-	bothMaxRight = 0;
-	soma = 0;
-	for (i = meio; i < hi; i++ ){
-		soma += a[i];
-		if (soma > bothMaxRight)
-			bothMaxRight = soma;
-	}
-			//combine
-	bothMax = bothMaxRight + bothMaxLeft;
-
-	return fmax(bothMax, fmax(maxEsq, maxDir));
-}
-
 int main(){
 	
 	return 0;
