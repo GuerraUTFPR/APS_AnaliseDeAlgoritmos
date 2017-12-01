@@ -1,11 +1,24 @@
-# Credits Dynamic Algorithm: https://github.com/devlinjunker/courses-max-subarray/blob/master/max-sub.py
-# Credits Div and Conquer Algorithm: Dhawal Patel - Programming forum
+# Reference Enumeration: https://pt.wikipedia.org/wiki/Sublista_cont%C3%ADgua_de_soma_m%C3%A1xima 
+# Reference Dynamic Algorithm: https://github.com/devlinjunker/courses-max-subarray/blob/master/max-sub.py
+# Reference Div and Conquer Algorithm: Dhawal Patel - Programming forum
 
 import time
 import sys
 
 ####################################################
 def enumeration(A):
+    max_ate_agora = 0.0
+    N = len(A)
+    for L in range(1, N + 1):
+        for U in range(L, N + 1):
+            soma = 0.0
+            for I in range(L, U + 1):
+                soma = soma + A[I - 1]
+            max_ate_agora = max(max_ate_agora, soma)
+    return max_ate_agora
+
+####################################################
+def betterEnumeration(A):
 	max_subset = 0
 	index_inicio = index_fim = 0
 
@@ -103,9 +116,21 @@ def gerarArray():
 				else:
 					array[i] = int(array[i])
 
+
+			# -------------------------------------------- Enumeration
 			print "Enumeration:"
 			milli_sec_start = int(round(time.time() * 1000))
 			maxsub = enumeration(array)
+			milli_sec_fim = int(round(time.time() * 1000))
+			tempo = milli_sec_fim - milli_sec_start
+			print "Tempo: " + str(tempo) + " ms"
+			print "Max Subarray: " + str(maxsub) + "\n"
+
+
+			# -------------------------------------------- Better Enumeration
+			print "BetterEnumeration:"
+			milli_sec_start = int(round(time.time() * 1000))
+			maxsub = betterEnumeration(array)
 			milli_sec_fim = int(round(time.time() * 1000))
 			tempo = milli_sec_fim - milli_sec_start
 			print "Tempo: " + str(tempo) + " ms"
