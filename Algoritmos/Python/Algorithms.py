@@ -63,37 +63,19 @@ def Divide(arr,l,h):
 
 ####################################################
 def dynamic(A):
-    start = 0
-    end = 0
-    max_subset = 0
-
-    vals = [0 for x in range(len(A))]
-
-    for i in range(len(A)):
-        if(i == 0):
-            if(A[i] > 0):
-                vals[i] = A[i]
-        elif(A[i] + vals[i-1] < 0):
-            vals[i] = 0
-        else:
-            vals[i] = vals[i-1]+A[i]
-        
-
-    for i in range(len(A)):
-        if(vals[i] > max_subset):
-            max_subset = vals[i]
-            end = i+1
-
-    temp = max_subset
-    for i in reversed(range(end)):
-        if(temp <= 0):
-            start = i+1
-            break
-        else:
-            temp = temp - A[i];
-
-    return max_subset
-
+     
+    max_so_far = 0
+    max_ending_here = 0
+     
+    for i in range(0, len(A)):
+        max_ending_here = max_ending_here + A[i]
+        if max_ending_here < 0:
+            max_ending_here = 0
+         
+        elif (max_so_far < max_ending_here):
+            max_so_far = max_ending_here
+             
+    return max_so_far
 ####################################################
 
 
