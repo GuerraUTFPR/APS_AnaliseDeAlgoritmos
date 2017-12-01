@@ -7,11 +7,11 @@ import sys
 
 ####################################################
 def enumeration(A):
-    max_ate_agora = 0.0
+    max_ate_agora = 0
     N = len(A)
     for L in range(1, N + 1):
         for U in range(L, N + 1):
-            soma = 0.0
+            soma = 0
             for I in range(L, U + 1):
                 soma = soma + A[I - 1]
             max_ate_agora = max(max_ate_agora, soma)
@@ -85,6 +85,7 @@ def gerarArray():
 	for line in f:
 		if "n = " in line:
 			print "------------------------\n"
+			fw.write("------------------------\n")
 			print line
 			fw.write(line)
 
@@ -101,36 +102,50 @@ def gerarArray():
 
 			# -------------------------------------------- Enumeration
 			print "Enumeration:"
+			fw.write("\nEnumeration:")
 			milli_sec_start = int(round(time.time() * 1000))
 			maxsub = enumeration(array)
 			milli_sec_fim = int(round(time.time() * 1000))
 			tempo = milli_sec_fim - milli_sec_start
+			
 			print "Tempo: " + str(tempo) + " ms"
-			print "Max Subarray: " + str(maxsub) + "\n"
+			fw.write("\nTempo: " + str(tempo) + " ms\n")
 
+			print "Max Subarray: " + str(maxsub) + "\n"
+			fw.write("Max Subarray: " + str(maxsub) + "\n")
 
 			# -------------------------------------------- Better Enumeration
 			print "BetterEnumeration:"
+			fw.write("\nBetterEnumeration:")
 			milli_sec_start = int(round(time.time() * 1000))
 			maxsub = betterEnumeration(array)
 			milli_sec_fim = int(round(time.time() * 1000))
 			tempo = milli_sec_fim - milli_sec_start
-			print "Tempo: " + str(tempo) + " ms"
-			print "Max Subarray: " + str(maxsub) + "\n"
 
+			print "Tempo: " + str(tempo) + " ms"
+			fw.write("\nTempo: " + str(tempo) + " ms\n")
+			
+			print "Max Subarray: " + str(maxsub) + "\n"
+			fw.write("Max Subarray: " + str(maxsub) + "\n")
 			# -------------------------------------------- Div and Conquer
 			
 			print "Div and Conquer:"
+			fw.write("\nDiv and Conquer:")
 			milli_sec_start = int(round(time.time() * 1000))
 			maxsub = Divide(array,0,len(array)-1)
 			milli_sec_fim = int(round(time.time() * 1000))
 			tempo = milli_sec_fim - milli_sec_start
+			
 			print "Tempo: " + str(tempo) + " ms"
+			fw.write("\nTempo: " + str(tempo) + " ms\n")
+
 			print "Max Subarray: " + str(maxsub) + "\n"
+			fw.write("Max Subarray: " + str(maxsub) + "\n")
 			
 
 			# --------------------------------------------- Dynamic
 			print "Dynamic:"
+			fw.write("\nDynamic: ")
 			milli_sec_start = int(round(time.time() * 1000))
 			
 			maxsub = dynamic(array)
@@ -138,9 +153,12 @@ def gerarArray():
 			milli_sec_fim = int(round(time.time() * 1000))
 
 			tempo = milli_sec_fim - milli_sec_start
-			print "Tempo: " + str(tempo) + " ms"
 
+			print "Tempo: " + str(tempo) + " ms"
+			fw.write("\nTempo: " + str(tempo) + " ms\n")
+			
 			print "Max Subarray: " + str(maxsub) + "\n"
+			fw.write("Max Subarray: " + str(maxsub) + "\n")
 			# ---------------------------------------------			
 
 	
