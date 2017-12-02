@@ -1,11 +1,10 @@
 // Segunda implementação do algoritmo do subvetor maximo
-// Versão iterativa melhorada!
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <time.h> 
 #include <sys/time.h> 
+
 
 int main( int argc, char *argv[ ] ){
 	if (argc != 3)
@@ -34,14 +33,18 @@ int main( int argc, char *argv[ ] ){
 	}
 	
 	int soma, maxSoma = INT_MIN, inicio, fim;
-    
-    clock_t tempoInicial, tempoFinal;
-   	double tempoGasto;
-   	tempoInicial = clock();
+
+	struct timeval time1, time2;
+    double elapsedTime;
+
+	gettimeofday(&time1, NULL);
+
 	// encontrar o subvetor maximo
-	for (int i = 0; i < n; i++){ // valor inicial
+	for (int i = 0; i < n; i++) // valor inicial
+	{
 		soma = 0;
-		for (int j = i; j < n; j++){ // vai de i até n
+		for (int j = i; j < n; j++) // vai de i até n
+		{
 			soma += vet[j];
 			if (soma > maxSoma){ // testa todas as somas de i até n e encontra a maior
 				maxSoma = soma;
@@ -50,17 +53,19 @@ int main( int argc, char *argv[ ] ){
 			}
 		}
 	}
-    tempoFinal = clock();
 
-   	tempoGasto = ((tempoFinal-tempoInicial)/CLOCKS_PER_SEC);
-	
+
+	gettimeofday(&time2, NULL);
+	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;      // sec to ms
+    elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0;   // us to ms
+
+
 	// imprimir resultados
 	for (int i = 0; i < n; i++){
 		printf("vet[%d]: %d\n", i, vet[i]);
 	}
 	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
-   	printf("Tempo em segundos: %f\n", tempoGasto);
-
+	printf("Tempo real: %lf ms\n", elapsedTime);
 
 	return 0;	
 }

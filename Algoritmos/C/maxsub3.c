@@ -5,8 +5,10 @@
 #include <time.h> 
 #include <sys/time.h> 
 
+
 // struct para poder retornar mais de um valor na função
-typedef struct Subvetor{
+typedef struct Subvetor
+{
 	int inicio;
 	int fim;
 	int soma;
@@ -44,25 +46,24 @@ int main( int argc, char *argv[ ] ){
 		i++;
 	}
 
-	
-    clock_t tempoInicial, tempoFinal;
-   	double tempoGasto;
-   	tempoInicial = clock();
+	struct timeval time1, time2;
+    double elapsedTime;
+
+	gettimeofday(&time1, NULL);
 	// encontrar o subvetor maximo
 	subvetor maxSubVetor = subvetor_maximo(vet, 0, n-1);
-    tempoFinal = clock();
 
-   	tempoGasto = ((tempoFinal-tempoInicial)/CLOCKS_PER_SEC);
+	gettimeofday(&time2, NULL);
+	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;      // sec to ms
+    elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0;   // us to ms
 
-
-	
 	// imprimir resultados
 	for (int i = 0; i < n; i++){
 		printf("vet[%d]: %d\n", i, vet[i]);
 	}
-
 	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
-   	printf("Tempo em segundos: %f\n", tempoGasto);
+	printf("Tempo real: %lf ms\n", elapsedTime);
+	
 	return 0;	
 }
 
@@ -95,7 +96,7 @@ subvetor max_cross(int* vet, int inicio, int meio, int fim){
 	maxSubVetor.inicio = e_max;
 	maxSubVetor.fim = d_max;
 	maxSubVetor.soma = (e_soma + d_soma);
-
+	// printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
 	
 	return maxSubVetor;
 }
