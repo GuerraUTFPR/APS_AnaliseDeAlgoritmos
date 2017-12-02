@@ -45,9 +45,16 @@ int main( int argc, char *argv[ ] ){
 	}
 
 	
-
+    clock_t tempoInicial, tempoFinal;
+   	double tempoGasto;
+   	tempoInicial = clock();
 	// encontrar o subvetor maximo
 	subvetor maxSubVetor = subvetor_maximo(vet, 0, n-1);
+    tempoFinal = clock();
+
+   	tempoGasto = ((tempoFinal-tempoInicial)/CLOCKS_PER_SEC);
+
+
 	
 	// imprimir resultados
 	for (int i = 0; i < n; i++){
@@ -55,6 +62,7 @@ int main( int argc, char *argv[ ] ){
 	}
 
 	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
+   	printf("Tempo em segundos: %f\n", tempoGasto);
 	return 0;	
 }
 

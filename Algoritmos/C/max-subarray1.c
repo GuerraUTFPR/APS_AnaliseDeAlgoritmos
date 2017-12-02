@@ -30,9 +30,13 @@ int main(int argc, char *argv[])
 		vet[i] = atoi(line);                          //                              
 		i++;                                          //
 	}                                                 //                                          
-
+	fclose(fp);
+	
 	int soma, maxSoma = INT_MIN, inicio, fim;        // declarações (obs -> INT_MIN = menor int possivel)
 
+	clock_t tempoInicial, tempoFinal;
+   	double tempoGasto;
+   	tempoInicial = clock();
 	// encontrar o subvetor maximo
 	for (int i = 0; i < n; i++){            // valor inicial
 		for (int j = i; j < n; j++){        // valor final
@@ -47,6 +51,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
+	tempoFinal = clock();
+
+   	tempoGasto = ((tempoFinal-tempoInicial)/CLOCKS_PER_SEC);
 
 	// imprimir resultados
 	for (int i = 0; i < n; i++){
@@ -54,6 +61,7 @@ int main(int argc, char *argv[])
 	}
 
 	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
+   	printf("Tempo em segundos: %f\n", tempoGasto);
 
 return 0;
 }

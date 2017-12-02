@@ -37,7 +37,10 @@ int main( int argc, char *argv[ ] ){
 	// inicia as somas
 	soma = vet[0];
 	maxSoma = vet[0];
-
+    
+    clock_t tempoInicial, tempoFinal;
+   	double tempoGasto;
+   	tempoInicial = clock();
 	// encontrar o subvetor maximo
 	for(int i = 1; i < n; i++){ // inicia em 1 pois as somas já iniciam com a posição 0
 		soma += vet[i];
@@ -51,12 +54,17 @@ int main( int argc, char *argv[ ] ){
 			fim = i; // o fim é a ultima posição.. no caso.. a posição atual
 		}
 	}
+	tempoFinal = clock();
+   	tempoGasto = ((tempoFinal-tempoInicial)/CLOCKS_PER_SEC);
+
 	
 	// imprimir resultados
 	for (int i = 0; i < n; i++){
 		printf("vet[%d]: %d\n", i, vet[i]);
 	}
 	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
+   	printf("Tempo em segundos: %f\n", tempoGasto);
+
 
 
 	return 0;	
