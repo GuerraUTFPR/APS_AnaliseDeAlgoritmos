@@ -1,0 +1,249 @@
+------------------------
+n = 4
+
+Enumeration:
+Tempo: 0.000000 ms
+MaxSubArray: 1 
+
+Better Enumeration:
+Tempo: 0.000000 ms
+MaxSubArray: 1 
+
+Div n Conquer: 
+Tempo: 0.000000 ms
+MaxSubArray: 1 
+
+Dynamic:
+Tempo: 0.000000 ms
+MaxSubArray: 1 
+
+------------------------
+n = 8
+
+Enumeration:
+Tempo: 0.000000 ms
+MaxSubArray: 4 
+
+Better Enumeration:
+Tempo: 0.000000 ms
+MaxSubArray: 4 
+
+Div n Conquer: 
+Tempo: 0.001000 ms
+MaxSubArray: 4 
+
+Dynamic:
+Tempo: 0.001000 ms
+MaxSubArray: 4 
+
+------------------------
+n = 16
+
+Enumeration:
+Tempo: 0.003000 ms
+MaxSubArray: 15 
+
+Better Enumeration:
+Tempo: 0.001000 ms
+MaxSubArray: 15 
+
+Div n Conquer: 
+Tempo: 0.002000 ms
+MaxSubArray: 15 
+
+Dynamic:
+Tempo: 0.001000 ms
+MaxSubArray: 15 
+
+------------------------
+n = 32
+
+Enumeration:
+Tempo: 0.014000 ms
+MaxSubArray: 104 
+
+Better Enumeration:
+Tempo: 0.002000 ms
+MaxSubArray: 104 
+
+Div n Conquer: 
+Tempo: 0.003000 ms
+MaxSubArray: 104 
+
+Dynamic:
+Tempo: 0.000000 ms
+MaxSubArray: 104 
+
+------------------------
+n = 64
+
+Enumeration:
+Tempo: 0.100000 ms
+MaxSubArray: 122 
+
+Better Enumeration:
+Tempo: 0.006000 ms
+MaxSubArray: 122 
+
+Div n Conquer: 
+Tempo: 0.005000 ms
+MaxSubArray: 122 
+
+Dynamic:
+Tempo: 0.000000 ms
+MaxSubArray: 122 
+
+------------------------
+n = 128
+
+Enumeration:
+Tempo: 0.793000 ms
+MaxSubArray: 255 
+
+Better Enumeration:
+Tempo: 0.022000 ms
+MaxSubArray: 255 
+
+Div n Conquer: 
+Tempo: 0.009000 ms
+MaxSubArray: 255 
+
+Dynamic:
+Tempo: 0.000000 ms
+MaxSubArray: 255 
+
+------------------------
+n = 256
+
+Enumeration:
+Tempo: 5.964000 ms
+MaxSubArray: 1647 
+
+Better Enumeration:
+Tempo: 0.078000 ms
+MaxSubArray: 1647 
+
+Div n Conquer: 
+Tempo: 0.019000 ms
+MaxSubArray: 1647 
+
+Dynamic:
+Tempo: 0.001000 ms
+MaxSubArray: 1647 
+
+------------------------
+n = 512
+
+Enumeration:
+Tempo: 49.287000 ms
+MaxSubArray: 2082 
+
+Better Enumeration:
+Tempo: 0.283000 ms
+MaxSubArray: 2082 
+
+Div n Conquer: 
+Tempo: 0.034000 ms
+MaxSubArray: 2082 
+
+Dynamic:
+Tempo: 0.002000 ms
+MaxSubArray: 2082 
+
+------------------------
+n = 1024
+
+Enumeration:
+Tempo: 382.283000 ms
+MaxSubArray: 4770 
+
+Better Enumeration:
+Tempo: 1.119000 ms
+MaxSubArray: 4770 
+
+Div n Conquer: 
+Tempo: 0.067000 ms
+MaxSubArray: 4770 
+
+Dynamic:
+Tempo: 0.005000 ms
+MaxSubArray: 4770 
+
+------------------------
+n = 2048
+
+Enumeration:
+Tempo: 3083.366000 ms
+MaxSubArray: 17566 
+
+Better Enumeration:
+Tempo: 5.025000 ms
+MaxSubArray: 17566 
+
+Div n Conquer: 
+Tempo: 0.168000 ms
+MaxSubArray: 17566 
+
+Dynamic:
+Tempo: 0.014000 ms
+MaxSubArray: 17566 
+
+------------------------
+n = 4096
+
+Enumeration:
+Tempo: 25111.147000 ms
+MaxSubArray: 80864 
+
+Better Enumeration:
+Tempo: 21.229000 ms
+MaxSubArray: 80864 
+
+Div n Conquer: 
+Tempo: 0.289000 ms
+MaxSubArray: 80864 
+
+Dynamic:
+Tempo: 0.015000 ms
+MaxSubArray: 80864 
+
+------------------------
+n = 8192
+
+Enumeration:
+Tempo: 207480.032000 ms
+MaxSubArray: 157411 
+
+Better Enumeration:
+Tempo: 76.759000 ms
+MaxSubArray: 157411 
+
+Div n Conquer: 
+Tempo: 0.587000 ms
+MaxSubArray: 157411 
+
+Dynamic:
+Tempo: 0.026000 ms
+MaxSubArray: 157411 
+
+------------------------
+n = 16384
+
+Enumeration:
+Tempo: 1571629.704000 ms
+MaxSubArray: 279008 
+
+Better Enumeration:
+Tempo: 305.630000 ms
+MaxSubArray: 279008 
+
+Div n Conquer: 
+Tempo: 1.227000 ms
+MaxSubArray: 279008 
+
+Dynamic:
+Tempo: 0.049000 ms
+MaxSubArray: 279008 
+
+------------------------
+
