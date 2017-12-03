@@ -4,6 +4,8 @@
 #include <limits.h>
 #include <time.h> 
 #include <sys/time.h> 
+#include <math.h>	
+#include <string.h>
 
 void max_sub1(int vetor[], int n){
 	int vet[n];
@@ -37,14 +39,9 @@ void max_sub1(int vetor[], int n){
 	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;	// sec to ms
 	elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0; // us to ms
 
-	// imprimir resultados
-	for (int i = 0; i < n; i++)
-	{
-		printf("vet[%d]: %d\n", i, vet[i]);
-	}
-	printf("--------Versão 1--------\n");
-	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
-	printf("Tempo real: %lf ms\n", elapsedTime);
+	printf("Enumeration:\n");
+	printf("Tempo: %lf ms\n", elapsedTime);
+	printf("MaxSubArray: %d \n", maxSoma);
 }
 
 
@@ -74,13 +71,10 @@ void max_sub2(int vetor[], int n){
 	gettimeofday(&time2, NULL);
 	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;      // sec to ms
     elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0;   // us to ms
-	// imprimir resultados
-	for (int i = 0; i < n; i++){
-		printf("vet[%d]: %d\n", i, vet[i]);
-	}
-	printf("--------Versão 2--------\n");
-	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
-	printf("Tempo real: %lf ms\n", elapsedTime);	
+
+	printf("Better Enumeration:\n");
+	printf("Tempo: %lf ms\n", elapsedTime);	
+	printf("MaxSubArray: %d \n", maxSoma);
 }
 
 typedef struct Subvetor{
@@ -118,7 +112,7 @@ subvetor max_cross(int* vet, int inicio, int meio, int fim){
 	maxSubVetor.inicio = e_max;
 	maxSubVetor.fim = d_max;
 	maxSubVetor.soma = (e_soma + d_soma);
-	// printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
+	// printf("MaxSubArray: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
 	
 	return maxSubVetor;
 }
@@ -140,7 +134,6 @@ subvetor subvetor_maximo(int* vet, int inicio, int fim){
 	}
 	
 	int meio = (inicio + fim)/2;
-	printf("inicio = %d, fim = %d, meio=%d\n", inicio, fim, meio);
 	e_maxSubVetor = subvetor_maximo(vet, inicio, meio); // testa se o subvetor está a esquerda
 	d_maxSubVetor = subvetor_maximo(vet, meio+1, fim); // testa se o subvetor está a direita
 	m_maxSubVetor = max_cross(vet, inicio, meio, fim); // testa se o subvetor está no meio
@@ -170,13 +163,10 @@ void max_sub3(int vetor[], int n){
 	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;      // sec to ms
     elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0;   // us to ms
 
-	// imprimir resultados
-	for (int i = 0; i < n; i++){
-		printf("vet[%d]: %d\n", i, vet[i]);
-	}
-	printf("--------Versão 3--------\n");
-	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSubVetor.soma, maxSubVetor.inicio, maxSubVetor.fim);
-	printf("Tempo real: %lf ms\n", elapsedTime);
+
+	printf("Div n Conquer: \n");
+	printf("Tempo: %lf ms\n", elapsedTime);
+	printf("MaxSubArray: %d \n", maxSubVetor.soma);
 }
 
 void max_sub4(int vetor[], int n){
@@ -207,51 +197,94 @@ void max_sub4(int vetor[], int n){
 	gettimeofday(&time2, NULL);
 	elapsedTime = (time2.tv_sec - time1.tv_sec) * 1000.0;      // sec to ms
     elapsedTime += (time2.tv_usec - time1.tv_usec) / 1000.0;   // us to ms
-	// imprimir resultados
-	for (int i = 0; i < n; i++){
-		printf("vet[%d]: %d\n", i, vet[i]);
-	}
-	printf("--------Versão 4--------\n");
-	printf("Soma maxima: %d \ninicio: %d \nfim: %d\n", maxSoma, inicio, fim);
-	printf("Tempo real: %lf ms\n", elapsedTime);
+
+	printf("Dynamic:\n");
+	printf("Tempo: %lf ms\n", elapsedTime);
+	printf("MaxSubArray: %d \n", maxSoma);
 }
+
+char itoc(int i) {
+     switch (i) {
+            case 0: return '0';
+            case 1: return '1';
+            case 2: return '2';
+            case 3: return '3';
+            case 4: return '4';
+            case 5: return '5';
+            case 6: return '6';
+            case 7: return '7';
+            case 8: return '8';
+            case 9: return '9';
+     }
+}
+
+void itoa(int i, char s[]) {
+    int m10 = 1;
+    int qt = 0;
+    int n;
+    
+    while (((int)(i/m10))>0)
+        m10 *= 10;
+
+    m10 /= 10;
+    
+    while (m10>0) {
+        n = (int)(i/m10) - ((int)(i/(m10*10))*10);
+        s[qt] = itoc(n);
+        m10 /= 10;
+        qt++;
+    }
+    s[qt] = '\0';
+}
+
+
 
 int main(int argc, char *argv[])
 {
 
-	if (argc != 3)
+
+
+	for (int j = 2; j < 16; j++)
 	{
-		printf("Uso: ./algoritmo tam_vet file\n");
-		return 0;
+		FILE *fp;
+		char *line = NULL;
+		size_t len = 0;
+		ssize_t read;
+		int i = 0;
+
+		int n = pow(2,j);
+
+		char arquivo[5];
+		itoa(n,arquivo);
+
+		fp = fopen(strcat(arquivo,".txt"), "r");
+		if (fp == NULL){
+			printf("Erro\n");
+			exit(EXIT_FAILURE);
+		}
+
+		int vet[n];
+
+		while ((read = getline(&line, &len, fp)) != -1)
+		{
+			vet[i] = atoi(line);
+			i++;
+		}
+
+		printf("------------------------\nn = %d\n\n",n);
+
+
+		max_sub1(vet,n);
+		printf("\n");
+		max_sub2(vet,n);
+		printf("\n");
+		max_sub3(vet,n);
+		printf("\n");
+		max_sub4(vet,n);
+		printf("\n");
+	 
+		
 	}
 
-	FILE *fp;
-	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
-	int i = 0;
-
-	int n = atoi(argv[1]); // tamanho do vetor
-	fp = fopen(argv[2], "r");
-	if (fp == NULL)
-		exit(EXIT_FAILURE);
-
-	int vet[n];
-
-	while ((read = getline(&line, &len, fp)) != -1)
-	{
-		vet[i] = atoi(line);
-		i++;
-	}
-
-	max_sub1(vet,n);
-	printf("##################################################\n");
-	max_sub2(vet,n);
-	printf("##################################################\n");
-	max_sub3(vet,n);
-	printf("##################################################\n");
-	max_sub4(vet,n);
-	printf("##################################################\n");
- 
 	return 0;
 }
