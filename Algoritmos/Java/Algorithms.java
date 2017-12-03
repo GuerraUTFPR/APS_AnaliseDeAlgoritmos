@@ -42,13 +42,11 @@ public class Algorithms {
             System.out.println("n = " + Math.pow(2, ordem) + "\n\n");
             gravarArq.printf("------------------------\n");
             gravarArq.printf("n = " + Math.pow(2, ordem) + "\n\n");
-            
+            List<Integer> arr = lerArquivo((int) Math.pow(2, ordem));            
 
-            //----------------------------------------------
+            //----------------------------------------------            
             inicio = Calendar.getInstance().getTimeInMillis();
-
-            saida = Enumeration(lerArquivo((int) Math.pow(2, ordem)));
-
+            saida = Enumeration(arr);
             fim = Calendar.getInstance().getTimeInMillis();
 
             tempo = fim - inicio;
@@ -57,31 +55,25 @@ public class Algorithms {
 
             //----------------------------------------------
             inicio = Calendar.getInstance().getTimeInMillis();
-
-            saida = BetterEnumeration(lerArquivo((int) Math.pow(2, ordem)));
-
+            saida = BetterEnumeration(arr);
             fim = Calendar.getInstance().getTimeInMillis();
 
             tempo = fim - inicio;
 
             printar(gravarArq, "BetterEnumeration", tempo, saida);
 
-            //----------------------------------------------
+            //----------------------------------------------                  
             inicio = Calendar.getInstance().getTimeInMillis();
-
-            saida = divideAndConquer(ordem, lerArquivo((int) Math.pow(2, ordem)));
-
+            saida = divAndConquer(arr, 0, arr.size()-1);
             fim = Calendar.getInstance().getTimeInMillis();
 
             tempo = fim - inicio;
 
             printar(gravarArq, "Div and Conquer", tempo, saida);
+            
 //----------------------------------------------
-
             inicio = Calendar.getInstance().getTimeInMillis();
-
-            saida = linear(lerArquivo((int) Math.pow(2, ordem)));
-
+            saida = linear(arr);
             fim = Calendar.getInstance().getTimeInMillis();
 
             tempo = fim - inicio;
@@ -135,55 +127,39 @@ public class Algorithms {
         return max;
     }
 
-    public Integer divideAndConquer(int n, List<Integer> vetor) {
-        if (n == 1) {
-            return vetor.get(0);
+    public Integer crossingSum(List<Integer> arr, Integer l, Integer m, Integer h){
+        Integer sum = 0;       
+        Integer left_sum = -999999999;
+        Integer right_sum = -999999999;
+        
+        for (int i = m; i > l-1; i--) {
+            sum = sum + arr.get(i);
+            if (sum > left_sum){
+                left_sum = sum;
+            }
+            
         }
-
-        int max = 0;
-        int aux = 0;
-        int h = n / 2;
-
-        // First half
-        aux = divideAndConquer(h, vetor);
-        if (aux > max) {
-            max = aux;
+        sum = 0;
+        for (int i = m+1; i < h+1; i++) {
+            sum = sum + arr.get(i);
+            if (sum > right_sum){
+                right_sum = sum;
+            }
         }
-
-        // Second half
-        aux = divideAndConquer(n - h, vetor.subList(h, vetor.size()));
-        if (aux > max) {
-            max = aux;
-        }
-
-        // Middle
-        aux = maxXffix(h, vetor, 0) + maxXffix(n - h, vetor.subList(h, vetor.size()), 1);
-        if (aux > max) {
-            max = aux;
-        }
-
-        return max;
+        
+        
+        return left_sum + right_sum;
     }
-
-    public Integer maxXffix(int n, List<Integer> array, int pre) {
-
-        int max = 0;
-        int aux = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (pre != 0) {
-                aux += array.get(i);
-            } else {
-                aux += array.get(n - i - 1);
-            }
-
-            // Updating max value
-            if (aux > max) {
-                max = aux;
-            }
+    
+    public Integer divAndConquer(List<Integer> arr, Integer l, Integer h){
+        if(l.equals(h)){
+            return arr.get(l);
         }
-
-        return max;
+        
+        Integer mid = (l+h)/2;
+        Integer maximum = Math.max(divAndConquer(arr, l, mid), Math.max(divAndConquer(arr, mid+1, h), crossingSum(arr, l, mid, h)));
+        
+        return maximum;
     }
 
     public Integer linear(List<Integer> array) {
