@@ -1,0 +1,181 @@
+n = 4
+Enumeration:
+MaxSubArray = 1
+Tempo gasto = 0.016460000000000002 ms
+
+Better Enumeration:
+MaxSubArray = 1
+Tempo gasto = 0.0067009999999999995 ms
+
+Divide and Conquer:
+MaxSubArray = 1
+Tempo gasto = 0.017943999999999998 ms
+
+Dynamic:
+MaxSubArray = 1
+Tempo gasto = 0.002738 ms
+==============================
+
+n = 8
+Enumeration:
+MaxSubArray = 4
+Tempo gasto = 0.037406 ms
+
+Better Enumeration:
+MaxSubArray = 4
+Tempo gasto = 0.011374 ms
+
+Divide and Conquer:
+MaxSubArray = 4
+Tempo gasto = 0.018462 ms
+
+Dynamic:
+MaxSubArray = 4
+Tempo gasto = 0.003006 ms
+==============================
+
+n = 16
+Enumeration:
+MaxSubArray = 15
+Tempo gasto = 0.21561 ms
+
+Better Enumeration:
+MaxSubArray = 15
+Tempo gasto = 0.045758 ms
+
+Divide and Conquer:
+MaxSubArray = 15
+Tempo gasto = 0.045312000000000005 ms
+
+Dynamic:
+MaxSubArray = 15
+Tempo gasto = 0.004633 ms
+==============================
+
+n = 32
+Enumeration:
+MaxSubArray = 104
+Tempo gasto = 1.33421 ms
+
+Better Enumeration:
+MaxSubArray = 104
+Tempo gasto = 0.132078 ms
+
+Divide and Conquer:
+MaxSubArray = 104
+Tempo gasto = 0.048004000000000005 ms
+
+Dynamic:
+MaxSubArray = 104
+Tempo gasto = 0.004143999999999999 ms
+==============================
+
+n = 64
+Enumeration:
+MaxSubArray = 122
+Tempo gasto = 5.913629 ms
+
+Better Enumeration:
+MaxSubArray = 122
+Tempo gasto = 0.280027 ms
+
+Divide and Conquer:
+MaxSubArray = 122
+Tempo gasto = 0.16603700000000002 ms
+
+Dynamic:
+MaxSubArray = 122
+Tempo gasto = 0.012039 ms
+==============================
+
+n = 128
+Enumeration:
+MaxSubArray = 255
+Tempo gasto = 34.135233 ms
+
+Better Enumeration:
+MaxSubArray = 255
+Tempo gasto = 0.827315 ms
+
+Divide and Conquer:
+MaxSubArray = 255
+Tempo gasto = 0.214178 ms
+
+Dynamic:
+MaxSubArray = 255
+Tempo gasto = 0.0244 ms
+==============================
+
+n = 256
+Enumeration:
+MaxSubArray = 1647
+Tempo gasto = 243.475714 ms
+
+Better Enumeration:
+MaxSubArray = 1647
+Tempo gasto = 3.320228 ms
+
+Divide and Conquer:
+MaxSubArray = 1647
+Tempo gasto = 0.40635600000000005 ms
+
+Dynamic:
+MaxSubArray = 1647
+Tempo gasto = 0.024644 ms
+==============================
+
+n = 512
+Enumeration:
+MaxSubArray = 2082
+Tempo gasto = 1936.665093 ms
+
+Better Enumeration:
+MaxSubArray = 2082
+Tempo gasto = 14.586635000000001 ms
+
+Divide and Conquer:
+MaxSubArray = 2082
+Tempo gasto = 1.347579 ms
+
+Dynamic:
+MaxSubArray = 2082
+Tempo gasto = 0.058176 ms
+==============================
+
+n = 1024
+Enumeration:
+MaxSubArray = 4770
+Tempo gasto = 16976.150826 ms
+
+Better Enumeration:
+MaxSubArray = 4770
+Tempo gasto = 73.321203 ms
+
+Divide and Conquer:
+MaxSubArray = 4770
+Tempo gasto = 1.845558 ms
+
+Dynamic:
+MaxSubArray = 4770
+Tempo gasto = 0.092012 ms
+==============================
+
+n = 2048
+Enumeration:
+MaxSubArray = 17566
+Tempo gasto = 114659.14879400001 ms
+
+Better Enumeration:
+MaxSubArray = 17566
+Tempo gasto = 252.91397500000002 ms
+
+Divide and Conquer:
+MaxSubArray = 17566
+Tempo gasto = 7.4509479999999995 ms
+
+Dynamic:
+MaxSubArray = 17566
+Tempo gasto = 0.33087 ms
+==============================
+
+n = 4096

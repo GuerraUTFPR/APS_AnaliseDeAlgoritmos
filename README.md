@@ -6,10 +6,10 @@ Esta atividade consiste em realizar uma avaliação empiríca do problema de sub
 Será implementado um temporizador para medir o tempo gasto para a resolução de cada implementação do algoritmo em cada uma das linguagens. Vale ressaltar que será utilizado um único computador para realizar a execução dos algoritmos.
 
 Implementações para o problema do subvetor máximo:
-- forca bruta;
-- força bruta inteligente;
-- divisão e conquista;
-- programação dinamica;
+- Enumeration (n³);
+- Better Enumeration (n²);
+- Divide and Conquer (n.logn);
+- Dynamic (n);
 
 
 Linguagens definidas:
