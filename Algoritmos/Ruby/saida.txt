@@ -1,0 +1,235 @@
+n = 4
+Enumeration:
+MaxSubArray = 1
+Tempo gasto = 0.040662 ms
+
+Better Enumeration:
+MaxSubArray = 1
+Tempo gasto = 0.021330000000000002 ms
+
+Divide and Conquer:
+MaxSubArray = 1
+Tempo gasto = 0.038365 ms
+
+Dynamic:
+MaxSubArray = 1
+Tempo gasto = 0.006967 ms
+==============================
+
+n = 8
+Enumeration:
+MaxSubArray = 4
+Tempo gasto = 0.06693 ms
+
+Better Enumeration:
+MaxSubArray = 4
+Tempo gasto = 0.035333 ms
+
+Divide and Conquer:
+MaxSubArray = 4
+Tempo gasto = 0.042960000000000005 ms
+
+Dynamic:
+MaxSubArray = 4
+Tempo gasto = 0.009907000000000001 ms
+==============================
+
+n = 16
+Enumeration:
+MaxSubArray = 15
+Tempo gasto = 0.263634 ms
+
+Better Enumeration:
+MaxSubArray = 15
+Tempo gasto = 0.050025 ms
+
+Divide and Conquer:
+MaxSubArray = 15
+Tempo gasto = 0.06329499999999999 ms
+
+Dynamic:
+MaxSubArray = 15
+Tempo gasto = 0.006782 ms
+==============================
+
+n = 32
+Enumeration:
+MaxSubArray = 104
+Tempo gasto = 1.7593940000000001 ms
+
+Better Enumeration:
+MaxSubArray = 104
+Tempo gasto = 0.168777 ms
+
+Divide and Conquer:
+MaxSubArray = 104
+Tempo gasto = 0.13547 ms
+
+Dynamic:
+MaxSubArray = 104
+Tempo gasto = 0.01104 ms
+==============================
+
+n = 64
+Enumeration:
+MaxSubArray = 122
+Tempo gasto = 12.767254000000001 ms
+
+Better Enumeration:
+MaxSubArray = 122
+Tempo gasto = 0.464533 ms
+
+Divide and Conquer:
+MaxSubArray = 122
+Tempo gasto = 0.249744 ms
+
+Dynamic:
+MaxSubArray = 122
+Tempo gasto = 0.013762 ms
+==============================
+
+n = 128
+Enumeration:
+MaxSubArray = 255
+Tempo gasto = 28.201642999999997 ms
+
+Better Enumeration:
+MaxSubArray = 255
+Tempo gasto = 0.55818 ms
+
+Divide and Conquer:
+MaxSubArray = 255
+Tempo gasto = 0.140564 ms
+
+Dynamic:
+MaxSubArray = 255
+Tempo gasto = 0.008861999999999998 ms
+==============================
+
+n = 256
+Enumeration:
+MaxSubArray = 1647
+Tempo gasto = 152.055133 ms
+
+Better Enumeration:
+MaxSubArray = 1647
+Tempo gasto = 2.169371 ms
+
+Divide and Conquer:
+MaxSubArray = 1647
+Tempo gasto = 0.290687 ms
+
+Dynamic:
+MaxSubArray = 1647
+Tempo gasto = 0.015896 ms
+==============================
+
+n = 512
+Enumeration:
+MaxSubArray = 2082
+Tempo gasto = 1152.555651 ms
+
+Better Enumeration:
+MaxSubArray = 2082
+Tempo gasto = 8.584415 ms
+
+Divide and Conquer:
+MaxSubArray = 2082
+Tempo gasto = 0.580591 ms
+
+Dynamic:
+MaxSubArray = 2082
+Tempo gasto = 0.030230999999999997 ms
+==============================
+
+n = 1024
+Enumeration:
+MaxSubArray = 4770
+Tempo gasto = 9138.980086 ms
+
+Better Enumeration:
+MaxSubArray = 4770
+Tempo gasto = 36.886544 ms
+
+Divide and Conquer:
+MaxSubArray = 4770
+Tempo gasto = 1.1728999999999998 ms
+
+Dynamic:
+MaxSubArray = 4770
+Tempo gasto = 0.059942999999999996 ms
+==============================
+
+n = 2048
+Enumeration:
+MaxSubArray = 17566
+Tempo gasto = 75608.040878 ms
+
+Better Enumeration:
+MaxSubArray = 17566
+Tempo gasto = 141.87757000000002 ms
+
+Divide and Conquer:
+MaxSubArray = 17566
+Tempo gasto = 3.213061 ms
+
+Dynamic:
+MaxSubArray = 17566
+Tempo gasto = 0.12803599999999998 ms
+==============================
+
+n = 4096
+Enumeration:
+MaxSubArray = 80864
+Tempo gasto = 629392.448447 ms
+
+Better Enumeration:
+MaxSubArray = 80864
+Tempo gasto = 589.820389 ms
+
+Divide and Conquer:
+MaxSubArray = 80864
+Tempo gasto = 5.092974999999999 ms
+
+Dynamic:
+MaxSubArray = 80864
+Tempo gasto = 0.23052399999999998 ms
+==============================
+
+n = 8192
+Enumeration:
+MaxSubArray = 157411
+Tempo gasto = 4836653.5605150005 ms
+
+Better Enumeration:
+MaxSubArray = 157411
+Tempo gasto = 2243.090165 ms
+
+Divide and Conquer:
+MaxSubArray = 157411
+Tempo gasto = 10.748341 ms
+
+Dynamic:
+MaxSubArray = 157411
+Tempo gasto = 0.871984 ms
+==============================
+
+n = 16384
+Enumeration:
+MaxSubArray = 279008
+Tempo gasto = 37657843.635853 ms
+
+Better Enumeration:
+MaxSubArray = 279008
+Tempo gasto = 9054.229204000001 ms
+
+Divide and Conquer:
+MaxSubArray = 279008
+Tempo gasto = 22.744232999999998 ms
+
+Dynamic:
+MaxSubArray = 279008
+Tempo gasto = 0.9277880000000001 ms
+==============================
+
+n = 32768
