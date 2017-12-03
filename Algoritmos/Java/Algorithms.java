@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 import java.util.StringTokenizer;
 
 /*
@@ -81,7 +80,7 @@ public class Algorithms {
 
             inicio = Calendar.getInstance().getTimeInMillis();
 
-            saida = linear(ordem, lerArquivo((int) Math.pow(2, ordem)));
+            saida = linear(lerArquivo((int) Math.pow(2, ordem)));
 
             fim = Calendar.getInstance().getTimeInMillis();
 
@@ -99,26 +98,20 @@ public class Algorithms {
     }
 
     public Integer Enumeration(List<Integer> A) {
-
         int max = 0;
-        int N = A.size();
-        int soma = 0;
-        
-        for (int L = 1; L < N + 1; L++) {
-            for (int U = L; U < N + 1; U++) {
-                
-                soma = 0;
-                
-                for (int I = L; I < U+1; I++) {
-                    
-                    soma = soma + A.get(I-1);
-                    
-                    if (soma > max) {
-                        max = soma;
-                    }
-                    
+	int aux = 0;
+
+	for(int i = 0; i < A.size(); i++){
+            for(int j = i; j < A.size(); j++){
+                // Sum for sub-array array[i:j]
+                aux = 0;
+                for(int k = i; k <= j; k++){
+                    aux += A.get(k);
                 }
-                
+                // Updating max value
+                if(aux > max){
+                    max = aux;
+                }
             }
         }
         
@@ -126,24 +119,20 @@ public class Algorithms {
     }
 
     public Integer BetterEnumeration(List<Integer> A) {
-        Integer max_subarray = 0;
-        int soma = 0;
-        int index_inicio, index_fim;
+        int max = 0;
+	int aux = 0;
 
-        for (int i = 0; i < A.size(); ++i) {
-            soma = 0;
-            index_inicio = i;
+	for(int i = 0; i < A.size(); i++){
+            aux = 0;
+            for(int j = i; j < A.size(); j++){
+                aux += A.get(j);
 
-            for (int j = i; j < A.size(); j++) {
-                soma += A.get(j);
-
-                if (soma > max_subarray) {
-                    max_subarray = soma;
-                    index_fim = j;
-                }
+                // Updating max value
+                if(aux > max) max = aux;
             }
-        }
-        return max_subarray;
+	}
+
+        return max;
     }
 
     public Integer divideAndConquer(int n, List<Integer> vetor) {
@@ -197,26 +186,27 @@ public class Algorithms {
         return max;
     }
 
-    public Integer linear(int n, List<Integer> array) {
+    public Integer linear(List<Integer> array) {
         int max_suffix = 0;
-        Integer max_subarray = 0;
-        int aux = 0;
+	int max_subarray = 0;
+	int aux = 0;
 
-        for (int i = 0; i < n; i++) {
+	for(int i = 0; i < array.size(); i++){
             // Max suffix i
             aux = max_suffix + array.get(i);
-            if (aux > 0) {
+            if(aux > 0){
                 max_suffix = aux;
-            } else {
+            }
+            else{
                 max_suffix = 0;
             }
 
             // Max sub-array i
-            if (max_suffix > max_subarray) {
+            if(max_suffix > max_subarray){
                 max_subarray = max_suffix;
             }
 
-        }
+	}
 
         return max_subarray;
     }
