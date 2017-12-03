@@ -228,7 +228,7 @@ public class Algorithms {
         String linha;
 
         try {
-            FileReader reader = new FileReader("../../entradasJava.txt");
+            FileReader reader = new FileReader("entradasJava.txt");
             BufferedReader leitor = new BufferedReader(reader);
             StringTokenizer st = null;
             StringTokenizer st2 = null;

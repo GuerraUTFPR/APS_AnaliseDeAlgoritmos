@@ -36,11 +36,9 @@ def CrossingSum(arr,l,m,h):
     summ = 0
     left_sum = -sys.maxint
     for i in range(m,l-1,-1):
-
             summ = summ + arr[i]
             if summ > left_sum:
                     left_sum = summ
-
 
     summ = 0
     right_sum = -sys.maxint
@@ -58,8 +56,6 @@ def Divide(arr,l,h):
     maximum = max(Divide(arr,l,mid) , Divide(arr,mid+1,h) , CrossingSum(arr,l,mid,h))
 
     return maximum
-
-
 
 ####################################################
 def dynamic(A):

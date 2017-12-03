@@ -1,0 +1,350 @@
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 4 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 64.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 128.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 256.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 512.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 1024.0
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 2048.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 4096.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 8192.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 16384.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 32768.0
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 65536.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 4
+
+Enumeration:Tempo: 3 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 8
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 16
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 32
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 64
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 128
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 256
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 512
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 1024
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 2048
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 0
+------------------------
+n = 4096
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 8192
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 16384
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 32768
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 1 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 65536
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 3 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 0 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 1 msMax Subarray: 0
+BetterEnumeration:Tempo: 0 msMax Subarray: 0
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 0
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 3 msMax Subarray: 1
+BetterEnumeration:Tempo: 1 msMax Subarray: 1
+Div and Conquer:Tempo: 0 msMax Subarray: 1
+Dynamic:Tempo: 1 msMax Subarray: 1
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 1 msMax Subarray: 4
+BetterEnumeration:Tempo: 0 msMax Subarray: 4
+Div and Conquer:Tempo: 0 msMax Subarray: 4
+Dynamic:Tempo: 1 msMax Subarray: 4
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 1 msMax Subarray: 15
+BetterEnumeration:Tempo: 0 msMax Subarray: 15
+Div and Conquer:Tempo: 0 msMax Subarray: 15
+Dynamic:Tempo: 0 msMax Subarray: 15
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 1 msMax Subarray: 104
+BetterEnumeration:Tempo: 1 msMax Subarray: 104
+Div and Conquer:Tempo: 0 msMax Subarray: 104
+Dynamic:Tempo: 1 msMax Subarray: 104
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 4 msMax Subarray: 1
+BetterEnumeration:Tempo: 1 msMax Subarray: 1
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 1
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 0 msMax Subarray: 4
+BetterEnumeration:Tempo: 0 msMax Subarray: 4
+Div and Conquer:Tempo: 3 msMax Subarray: 0
+Dynamic:Tempo: 1 msMax Subarray: 4
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 1 msMax Subarray: 15
+BetterEnumeration:Tempo: 1 msMax Subarray: 15
+Div and Conquer:Tempo: 0 msMax Subarray: 4
+Dynamic:Tempo: 0 msMax Subarray: 15
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 1 msMax Subarray: 104
+BetterEnumeration:Tempo: 1 msMax Subarray: 104
+Div and Conquer:Tempo: 0 msMax Subarray: 24
+Dynamic:Tempo: 0 msMax Subarray: 104
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 3 msMax Subarray: 1
+BetterEnumeration:Tempo: 1 msMax Subarray: 1
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 1
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 0 msMax Subarray: 4
+BetterEnumeration:Tempo: 1 msMax Subarray: 4
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 4
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 1 msMax Subarray: 15
+BetterEnumeration:Tempo: 0 msMax Subarray: 15
+Div and Conquer:Tempo: 0 msMax Subarray: 4
+Dynamic:Tempo: 1 msMax Subarray: 15
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 2 msMax Subarray: 104
+BetterEnumeration:Tempo: 1 msMax Subarray: 104
+Div and Conquer:Tempo: 1 msMax Subarray: 24
+Dynamic:Tempo: 1 msMax Subarray: 104
+------------------------
+n = 4.0
+
+Enumeration:Tempo: 3 msMax Subarray: 1
+BetterEnumeration:Tempo: 1 msMax Subarray: 1
+Div and Conquer:Tempo: 0 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 1
+------------------------
+n = 8.0
+
+Enumeration:Tempo: 0 msMax Subarray: 4
+BetterEnumeration:Tempo: 1 msMax Subarray: 4
+Div and Conquer:Tempo: 1 msMax Subarray: 0
+Dynamic:Tempo: 0 msMax Subarray: 4
+------------------------
+n = 16.0
+
+Enumeration:Tempo: 1 msMax Subarray: 15
+BetterEnumeration:Tempo: 0 msMax Subarray: 15
+Div and Conquer:Tempo: 0 msMax Subarray: 4
+Dynamic:Tempo: 1 msMax Subarray: 15
+------------------------
+n = 32.0
+
+Enumeration:Tempo: 2 msMax Subarray: 104
+BetterEnumeration:Tempo: 1 msMax Subarray: 104
+Div and Conquer:Tempo: 1 msMax Subarray: 24
+Dynamic:Tempo: 0 msMax Subarray: 104
